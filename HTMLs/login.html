@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Talentio</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/main.css"/>
+	<script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<div class="login-content-area vbox vbox-center">
+    <div class="login-form-container vbox-start vbox">
+        <div class="hbox-center logo-container">
+            <img src="../Images/logo.jpg" class="logo" alt="Home" onclick="location.href='/'">
+        </div>
+		
+<form class="vbox vbox-center" action="../php/loginValidation.php" method="post">
+    <label class="form-label" for="username">Username</label>
+	<input class="form-field" type="text" placeholder="Enter username" id="username" name="username" required>
+
+    <label class="form-label" for="password">Password</label>
+    <input type="password" class="form-field" placeholder="Enter password" id="password" name="password" required>
+
+	<button class="button" type="submit">Login</button>
+</form>
+</div>
+</div>
+</body>
+</html>
